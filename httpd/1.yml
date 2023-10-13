@@ -10,7 +10,7 @@ spec:
   - env:
     - name: TERM
       value: xterm
-    image: docker.io/library/my-httpd-2:latest
+    image: tutum/hello-world
     name: test1-httpd
     ports:
     - containerPort: 8090
