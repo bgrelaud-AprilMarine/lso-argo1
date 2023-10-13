@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-10-13T14:31:24Z"
+  labels:
+    app: test1-httpd-pod
+  name: test1-httpd-pod
+spec:
+  containers:
+  - env:
+    - name: TERM
+      value: xterm
+    image: docker.io/library/my-httpd-2:latest
+    name: test1-httpd
+    ports:
+    - containerPort: 8090
+      hostPort: 8090
+    - containerPort: 80
+      hostPort: 9000
+    tty: true
